@@ -1,0 +1,196 @@
+/* General
+------------------------------- */ 
+body {
+    margin: 0;
+    padding: 0;
+    color: #212121;
+}
+#page {
+    padding: 40px 0 0 0;
+    margin: 0 auto;
+}
+/* Header
+------------------------------- */
+header .page-header {
+    padding-bottom: 15px;
+}
+.page-header {
+    border-bottom: 3px dotted #fff;
+}
+header h1 {
+    font-family: 'Patua One', cursive;
+    font-size: 110px;
+    text-align: center;
+    letter-spacing: -2px;
+	margin-bottom: 20px;
+}
+header h1 a, header h1 a:visited {
+    color: #fff;
+}
+header h1 a:hover {
+    text-decoration: none;
+}
+header p.lead {
+    margin-bottom: 40px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #212121;
+}
+header div.actions {
+    margin-top: 20px;
+    text-align: center;
+}
+.btn-large {
+    font-weight: bold;
+    font-family: 'Patua One', cursive;
+    font-size: 30px;
+}
+header div.actions .btn-toolbar {
+    margin-bottom: 10px;
+}
+/* Modal
+------------------------------- */
+.modal-header h3 {
+    text-align: left;
+}
+/* Filters
+------------------------------- */
+.filter {
+    font-family: 'Patua One', cursive;
+    font-size: 20px;
+    padding: 10px;
+}
+/* Content
+------------------------------- */
+#content {
+    margin-top: 30px;
+}
+/* Boxes
+------------------------------- */
+.well{
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border:none;
+}
+.well img {
+    max-width: 100%;
+}
+.well img:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+}
+.well .info {
+    margin: 20px 5% 20px 5%;
+}
+.well .info h2 {
+    line-height: 30px;
+    margin-bottom: 12px;
+}
+/* Single Post
+------------------------------- */
+#post {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#post h1 {
+    color: #212121;
+    font-size: 40px;
+    padding-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+#post p {
+    color: #212121;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+#post .video-container {
+    margin-left: 20px;
+    margin-bottom:20px;
+}
+#post .span4 p {
+    color: #212121;
+    margin-left: 0px;
+    margin-right: 20px;
+}
+.video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16/9 ratio */
+    height: 0;
+    overflow: hidden;
+}
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Pagination
+------------------------------- */
+.pagination ul {
+    margin-top: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: "yanone kaffeesatz", sans-serif;
+    font-size: 25px;
+}
+.pagination ul > li a, .pagination ul > li a:visited {
+    color: #212121;
+    padding: 10px;
+}
+.pagination .disabled a, .pagination .disabled a:visited, .pagination .disabled a:hover {
+    color: #999;
+}
+.pagination .active a, .pagination .active a:visited, .pagination .active a:hover {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Footer
+------------------------------- */
+.page-footer {
+    margin-top: 120px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+#footer-text h4 {
+    margin-top: 30px;
+    color: #fff;
+}
+#footer-text h4 a, #footer-text h4 a:visited {
+    color: #fff;
+}
+hr {
+    border-top: none;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+}
+#footer-text .logos {
+    margin: 10px 0 30px 0;
+}
+.login img {
+    height: 25px;
+    margin-right: 20px;
+}
+.raneri img {
+    height: 45px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.informate img {
+    height: 35px;
+    margin-top: 3px;
+}

@@ -1,0 +1,26 @@
+<form class="form-horizontal" action="@category">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form Name</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="title">Category</label>  
+  <div class="col-md-4">
+  <input name="category" type="text" placeholder="Insert the category" class="form-control input-md">
+  </div>
+</div>
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton">Single Button</label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+  </div>
+</div>
+
+
+</fieldset>
+</form>

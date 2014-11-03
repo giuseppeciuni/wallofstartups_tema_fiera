@@ -1,0 +1,84 @@
+<form class="form-horizontal">
+     
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="startup_title">Startup Title</label>  
+  <div class="col-md-9">
+  <input id="title" name="title" type="text" placeholder="Insert the title " class="form-control input-md" required="">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+
+<!-- Text input -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="description">Description</label>
+  <div class="col-md-9">                     
+    <textarea class="form-control" id="description" name="description", placeholder="Insert a description of your startup"> </textarea>
+  </div>
+</div>
+
+<!-- Text input -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="video_url">Video Url</label>
+  <div class="col-md-9">  
+    <input id="video_url" name="video_url" type="text" placeholder="Insert the youtube/vimeo video URL" class="form-control input-md" required="">                   
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="pitch_in_a_tweet">Short Description</label>  
+  <div class="col-md-9">
+  <input id="pitch_in_a_tweet" name="pitch_in_a_tweet" type="text" placeholder="Insert a very short description " class="form-control input-md" required="">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="category">Startup Category</label>
+  <div class="col-md-4">
+    <select id="category" name="category" class="form-control">
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes (inline) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Approved">Approved</label>
+  <div class="col-md-4">
+    <label class="checkbox-inline" for="Approved-0">
+      <input type="checkbox" name="Approved" id="Approved-0" value="1">
+      1
+    </label>
+  </div>
+</div>
+
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">In the spotlight</label>
+  <div class="col-md-4">
+    <div class="checkbox">
+      <label class="checkbox-inline" for="checkboxes-0">
+        <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      1
+      </label>
+    </div>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-8">
+    <button id="submit" name="submit" class="btn btn-info">Submit</button>
+    <button id="cancel" name="cancel" class="btn btn-default">cancel</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
