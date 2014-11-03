@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Title, Author, Description -->
+    <title>CatRoulette | La Fiera delle Startup</title>
+    <meta name="description" content="This is the description provided by the user.">
+    <meta name="author" content="StartuppaMi">
+    <!-- Stylesheets -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/theme-responsive.css" rel="stylesheet">
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <!-- Fav and Touch Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-precomposed-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-precomposed-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-precomposed-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-precomposed-57.png">
+    <!-- Background -->
+    <style type="text/css">
+        body {
+            background-image: url(images/bg.jpg); 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div id="page" class="container">
+        <!-- Header -->
+        <header class="page-header">
+            <h1><a href="index.html">La Fiera delle Startup</a></h1>
+            <div class="description">
+                <p class="lead">
+                    Invia il tuo video-pitch e vota i tuoi video preferiti. Solo i migliori 100 partecipano.
+                </p>
+            </div>
+            <div class="actions">
+                <div class="btn-toolbar">
+                    <div class="btn-group">
+                        <a class="btn btn-large btn-inverse" href="#submitvideo" data-toggle="modal">
+                            Invia il tuo video
+                        </a>
+                    </div>
+                        <!-- Submit Video -->
+                        <div id="submitvideo" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">Invia il tuo video</h3>
+                            </div>
+                            <div class="modal-body">
+                                <input class="input-block-level" type="text" placeholder="Nome della startup" required>
+                                <input class="input-block-level" type="text" placeholder="Url del video (es. http://www.youtube.com/watch?v=KnVVAAewiRI)" required>
+                                <textarea rows="3" class="input-block-level" type="text" placeholder="Quick pitch"></textarea>
+                                <input class="input-block-level" type="email" placeholder="Email di contatto" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">Annulla</button>
+                                <button class="btn btn-inverse">Invia</button>
+                            </div>
+                        </div>
+                    <div class="btn-group">
+                        <a class="btn btn-large" href="progetto.html">
+                            Scopri il progetto
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Filters -->
+        <div class="btn-group">
+            <a class="btn filter" href="index.html">
+                « Tutti i video
+            </a>
+            <a class="btn filter" href="#" style="float:right">
+                ❯❯
+            </a>
+            <a class="btn filter" href="#" style="float:right">
+                ❮❮
+            </a>
+        </div>
+        <!-- Post -->
+        <div id="post">
+            <h1>CatRoulette</h1>
+            <div class="row-fluid">
+                <div class="span8">
+                    <div class="video-container">
+                        <div class="video">
+                            <iframe src="http://www.youtube.com/embed/6IQ0snWgef0" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="span4">
+                    <p>This is the description provided by the user.</p>
+                    <img src="images/like.png" style="padding-bottom:20px;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="page-footer">
+        <div id="footer-text" class="container">
+            <div class="row-fluid">
+                <div class="span6">
+                    <h4>©2013 <a href="http://www.startuppami.it" target="_blank">StartuppaMi</a> /<br> Made with love in Milan</h4>
+                    <hr>
+                </div>
+                <div class="span6">
+                    <h4>Credits:</h4>
+                    <div class="logos">
+                        <a class="login" href="http://www.coworkinglogin.it" target="_blank"><img src="images/login.png" alt="Login - Coworking Space"></a>
+                        <a class="raneri" href="http://www.raneri.it" target="_blank"><img src="images/raneri.png" alt="Raneri Webdesign"></a>
+                        <a class="informate" href="http://www.informate.it" target="_blank"><img src="images/informate.png" alt="Informate"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/libs/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/libs/jquery.masonry.min.js"></script>
+    <script src="js/base.js" type="text/javascript"></script>
+</body>
+</html>

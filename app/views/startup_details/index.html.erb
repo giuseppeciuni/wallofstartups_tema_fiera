@@ -1,0 +1,85 @@
+<h1>Listing startup_details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Startup</th>
+      <th>Startup name</th>
+      <th>Logo</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Job title</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Mobile</th>
+      <th>Short project description</th>
+      <th>One line pitch</th>
+      <th>Business summary</th>
+      <th>Customer problem</th>
+      <th>Products and services</th>
+      <th>Target market</th>
+      <th>Sales marketing strategy</th>
+      <th>Business model</th>
+      <th>Competitors</th>
+      <th>Competitive advantage</th>
+      <th>Management team</th>
+      <th>Advisory board</th>
+      <th>Revenue model</th>
+      <th>Break even analysis</th>
+      <th>Previous investiments</th>
+      <th>Use of funds</th>
+      <th>Past significant milestones</th>
+      <th>Exit strategy</th>
+      <th>Comparable exit markets</th>
+      <th>Value proposition</th>
+      <th>Resources beyond capital</th>
+      <th>Additional info</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @startup_details.each do |startup_detail| %>
+      <tr>
+        <td><%= startup_detail.startup_id %></td>
+        <td><%= startup_detail.startup_name %></td>
+        <td><%= startup_detail.logo %></td>
+        <td><%= startup_detail.name %></td>
+        <td><%= startup_detail.surname %></td>
+        <td><%= startup_detail.job_title %></td>
+        <td><%= startup_detail.email %></td>
+        <td><%= startup_detail.phone %></td>
+        <td><%= startup_detail.mobile %></td>
+        <td><%= startup_detail.short_project_description %></td>
+        <td><%= startup_detail.one_line_pitch %></td>
+        <td><%= startup_detail.business_summary %></td>
+        <td><%= startup_detail.customer_problem %></td>
+        <td><%= startup_detail.products_and_services %></td>
+        <td><%= startup_detail.target_market %></td>
+        <td><%= startup_detail.sales_marketing_strategy %></td>
+        <td><%= startup_detail.business_model %></td>
+        <td><%= startup_detail.competitors %></td>
+        <td><%= startup_detail.competitive_advantage %></td>
+        <td><%= startup_detail.management_team %></td>
+        <td><%= startup_detail.advisory_board %></td>
+        <td><%= startup_detail.revenue_model %></td>
+        <td><%= startup_detail.break_even_analysis %></td>
+        <td><%= startup_detail.previous_investiments %></td>
+        <td><%= startup_detail.use_of_funds %></td>
+        <td><%= startup_detail.past_significant_milestones %></td>
+        <td><%= startup_detail.exit_strategy %></td>
+        <td><%= startup_detail.comparable_exit_markets %></td>
+        <td><%= startup_detail.value_proposition %></td>
+        <td><%= startup_detail.resources_beyond_capital %></td>
+        <td><%= startup_detail.additional_info %></td>
+        <td><%= link_to 'Show', startup_detail %></td>
+        <td><%= link_to 'Edit', edit_startup_detail_path(startup_detail) %></td>
+        <td><%= link_to 'Destroy', startup_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Startup detail', new_startup_detail_path %>

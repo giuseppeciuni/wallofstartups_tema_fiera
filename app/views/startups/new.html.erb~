@@ -1,0 +1,58 @@
+
+<h1>ciao <h1>
+
+<%= form_for @startup, :html => {:class => "form-horizontal center"} do |f| %>
+     
+      <div class="form-group">
+        <%= f.label :title, "Title", class: "control-label col-xs-2" %>
+        <div class="col-md-6">
+          <%= f.text_field :title, class: "form-control", :placeholder =>"Insert the title" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :description, "Description", class: "control-label col-xs-2" %>
+        <div class="col-md-6">
+          <%= f.text_field :description, class: "form-control", :placeholder =>"Insert a short description"  %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :video_url, "Video Url", class: "control-label col-xs-2" %>
+        <div class="col-md-8">
+          <%= f.text_field :video_url, class: "form-control", :placeholder =>"Insert the youtube or vimeo url of your video"  %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :fund_needed, "Funding need", class: "control-label col-xs-2" %>
+        <div class="col-md-2">
+          <%= f.text_field :funding_need, class: "form-control", :placeholder =>"Funding need"  %>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <%= f.label :subcategory, "Startup Category", class: "control-label col-xs-2" %>
+	  <%= f.select :subcategory, ['FOOD', 'FASHION', 'TURISMO', 'DIGITAL', 'IT', 'ALTRO'], prompt: "----" %>
+        <div class="col-md-8>
+          <%= f.text_field :video_url, class: "form-control" %>
+        </div>
+      </div>
+
+      <div class="form-group">
+          <%= f.label :approved, "Approved", class: "control-label col-xs-2" %>
+          <%=check_box("approved", "approved", { class: 'approved_check' }, "yes", "no") %>         
+      </div>
+
+     <div class="form-group">
+          <%= f.label :in_the_spotlight, "In the Spotlight", class: "control-label col-xs-2" %>
+          <%= check_box("inthespotlight", "inthespotlight",  { class: 'inthespotlight_check'}, "yes", "no") %>         
+      </div>
+ 
+  
+
+     <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        <%= f.submit "Salva", :class=> "btn btn-primary" %>
+      </div>
+ <% end %>

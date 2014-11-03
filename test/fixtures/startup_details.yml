@@ -1,0 +1,67 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  startup_id: 1
+  startup_name: MyString
+  logo: MyString
+  name: MyString
+  surname: MyString
+  job_title: MyString
+  email: MyString
+  phone: MyString
+  mobile: MyString
+  short_project_description: MyText
+  one_line_pitch: MyText
+  business_summary: MyText
+  customer_problem: MyText
+  products_and_services: MyText
+  target_market: MyText
+  sales_marketing_strategy: MyText
+  business_model: MyText
+  competitors: MyText
+  competitive_advantage: MyText
+  management_team: MyText
+  advisory_board: MyText
+  revenue_model: MyText
+  break_even_analysis: MyText
+  previous_investiments: MyText
+  use_of_funds: MyText
+  past_significant_milestones: MyText
+  exit_strategy: MyText
+  comparable_exit_markets: MyText
+  value_proposition: MyText
+  resources_beyond_capital: MyText
+  additional_info: MyText
+
+two:
+  startup_id: 1
+  startup_name: MyString
+  logo: MyString
+  name: MyString
+  surname: MyString
+  job_title: MyString
+  email: MyString
+  phone: MyString
+  mobile: MyString
+  short_project_description: MyText
+  one_line_pitch: MyText
+  business_summary: MyText
+  customer_problem: MyText
+  products_and_services: MyText
+  target_market: MyText
+  sales_marketing_strategy: MyText
+  business_model: MyText
+  competitors: MyText
+  competitive_advantage: MyText
+  management_team: MyText
+  advisory_board: MyText
+  revenue_model: MyText
+  break_even_analysis: MyText
+  previous_investiments: MyText
+  use_of_funds: MyText
+  past_significant_milestones: MyText
+  exit_strategy: MyText
+  comparable_exit_markets: MyText
+  value_proposition: MyText
+  resources_beyond_capital: MyText
+  additional_info: MyText

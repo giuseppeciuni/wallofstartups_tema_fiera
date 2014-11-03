@@ -1,0 +1,141 @@
+<%= form_for(@startup_detail) do |f| %>
+  <% if @startup_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@startup_detail.errors.count, "error") %> prohibited this startup_detail from being saved:</h2>
+
+      <ul>
+      <% @startup_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :startup_id %><br>
+    <%= f.number_field :startup_id %>
+  </div>
+  <div class="field">
+    <%= f.label :startup_name %><br>
+    <%= f.text_field :startup_name %>
+  </div>
+  <div class="field">
+    <%= f.label :logo %><br>
+    <%= f.text_field :logo %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= f.text_field :surname %>
+  </div>
+  <div class="field">
+    <%= f.label :job_title %><br>
+    <%= f.text_field :job_title %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :mobile %><br>
+    <%= f.text_field :mobile %>
+  </div>
+  <div class="field">
+    <%= f.label :short_project_description %><br>
+    <%= f.text_area :short_project_description %>
+  </div>
+  <div class="field">
+    <%= f.label :one_line_pitch %><br>
+    <%= f.text_area :one_line_pitch %>
+  </div>
+  <div class="field">
+    <%= f.label :business_summary %><br>
+    <%= f.text_area :business_summary %>
+  </div>
+  <div class="field">
+    <%= f.label :customer_problem %><br>
+    <%= f.text_area :customer_problem %>
+  </div>
+  <div class="field">
+    <%= f.label :products_and_services %><br>
+    <%= f.text_area :products_and_services %>
+  </div>
+  <div class="field">
+    <%= f.label :target_market %><br>
+    <%= f.text_area :target_market %>
+  </div>
+  <div class="field">
+    <%= f.label :sales_marketing_strategy %><br>
+    <%= f.text_area :sales_marketing_strategy %>
+  </div>
+  <div class="field">
+    <%= f.label :business_model %><br>
+    <%= f.text_area :business_model %>
+  </div>
+  <div class="field">
+    <%= f.label :competitors %><br>
+    <%= f.text_area :competitors %>
+  </div>
+  <div class="field">
+    <%= f.label :competitive_advantage %><br>
+    <%= f.text_area :competitive_advantage %>
+  </div>
+  <div class="field">
+    <%= f.label :management_team %><br>
+    <%= f.text_area :management_team %>
+  </div>
+  <div class="field">
+    <%= f.label :advisory_board %><br>
+    <%= f.text_area :advisory_board %>
+  </div>
+  <div class="field">
+    <%= f.label :revenue_model %><br>
+    <%= f.text_area :revenue_model %>
+  </div>
+  <div class="field">
+    <%= f.label :break_even_analysis %><br>
+    <%= f.text_area :break_even_analysis %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_investiments %><br>
+    <%= f.text_area :previous_investiments %>
+  </div>
+  <div class="field">
+    <%= f.label :use_of_funds %><br>
+    <%= f.text_area :use_of_funds %>
+  </div>
+  <div class="field">
+    <%= f.label :past_significant_milestones %><br>
+    <%= f.text_area :past_significant_milestones %>
+  </div>
+  <div class="field">
+    <%= f.label :exit_strategy %><br>
+    <%= f.text_area :exit_strategy %>
+  </div>
+  <div class="field">
+    <%= f.label :comparable_exit_markets %><br>
+    <%= f.text_area :comparable_exit_markets %>
+  </div>
+  <div class="field">
+    <%= f.label :value_proposition %><br>
+    <%= f.text_area :value_proposition %>
+  </div>
+  <div class="field">
+    <%= f.label :resources_beyond_capital %><br>
+    <%= f.text_area :resources_beyond_capital %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_info %><br>
+    <%= f.text_area :additional_info %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
