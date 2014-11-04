@@ -25,7 +25,6 @@ class StartupsController < ApplicationController
     p params
     @startup = Startup.new
     @categories = Category.all
-    
   end
 
   # GET /startups/1/edit
@@ -39,12 +38,13 @@ class StartupsController < ApplicationController
   # POST /startups.json
   def create
     @startup = Startup.new(startup_params)
+    @categories = Category.all
     puts "ciao"
     p startup_params
-    #nota bene: ogni ad variabile deve corrispondere una colonna sul db 
+    #nota bene: ogni ad variabile deve corrispondere una colonna sul db
     #creo il canonical a partire dall'url video passato dall'utente
     #uniformo la url a partire dai video youtube o vimeo
-    #salvo le url dei thumbnail dei video youtube o vimeo 
+    #salvo le url dei thumbnail dei video youtube o vimeo
     @startup.uniformed_url = uniform_url(startup_params[:video_url])
     @startup.video_thumbnail_url = get_thumbnail(startup_params[:video_url])
     @startup.video_type = get_video_type(startup_params[:video_url])
@@ -120,8 +120,8 @@ class StartupsController < ApplicationController
     url = url + facebook_access_token
     return url
   end
-    
-  
+
+
   # metodo che uniforma le url delle startup: in particolare controlla se sono di tipo youtube o di tipo vimeo
   # se di tipo youtube allora le lascia così come sono, se sono di tipo vimeo aggiunge al codice vimeo la parte
   # antecedente della url
@@ -134,14 +134,14 @@ class StartupsController < ApplicationController
     elsif url.include? "vimeo"
       vimeo_video = url.split("/").last
       uniformed_url = "//player.vimeo.com/video/" + vimeo_video
-    else 
-      uniformed_url = "Video non riconosciuto. Si possono caricare solo video Youtube e Vimeo" 
-    end 
-    puts "url uniformato: " + uniformed_url 
+    else
+      uniformed_url = "Video non riconosciuto. Si possono caricare solo video Youtube e Vimeo"
+    end
+    puts "url uniformato: " + uniformed_url
    return uniformed_url
   end
 
-  
+
   # metodo che restituisce l'url dell'immagine thumbnail associata ad un video youtube/vimeo
   def get_thumbnail(url)
     if url.include? "youtube"
@@ -151,9 +151,9 @@ class StartupsController < ApplicationController
       vimeo_video = url.split("/").last
       video = Vimeo::Simple::Video.info(vimeo_video)
       thumbnail = video[0]['thumbnail_large']
-    else 
+    else
       thumbnail = "Thumbnail non disponibile!"
-    end 
+    end
     return thumbnail
   end
 
@@ -174,9 +174,10 @@ class StartupsController < ApplicationController
 
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    #questa funzione serve per definire quali parametri possono essere inseriti  da interfaccia grafica, servono per evitare fishing, sql injection etc etc  
+    #questa funzione serve per definire quali parametri possono essere inseriti  da interfaccia grafica, servono per evitare fishing, sql injection etc etc
   def startup_params
     params.require(:startup).permit(:title, :description, :video_url, :subcategory, :rank, :approved, :in_the_spotlight, :startup_id, :order_by, :funding_need)
   end
 
 end
+
