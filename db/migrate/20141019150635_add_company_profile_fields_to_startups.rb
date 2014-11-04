@@ -1,4 +1,4 @@
-class AddCompanyProfileOtherFieldsToStartups < ActiveRecord::Migration
+class AddCompanyProfileFieldsToStartups < ActiveRecord::Migration
   def change
     add_column :startups, :state, :string
     add_column :startups, :province, :string
@@ -8,3 +8,4 @@ class AddCompanyProfileOtherFieldsToStartups < ActiveRecord::Migration
     add_column :startups, :foundedin, :integer
   end
 end
+
