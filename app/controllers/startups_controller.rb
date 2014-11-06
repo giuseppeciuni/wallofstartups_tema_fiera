@@ -31,7 +31,7 @@ class StartupsController < ApplicationController
   def edit
    @youtube = YouTubeIt::Client.new
    @vimeo = Vimeo::Simple::Video
-   p startup_edit_params
+   #p startup_edit_params
   end
 
   # POST /startups
