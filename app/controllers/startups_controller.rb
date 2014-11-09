@@ -4,7 +4,7 @@ class StartupsController < ApplicationController
   # GET /startups
   # GET /startups.json
   def index
-    @startups = Startup.all
+    @startups = Startup.all.paginate(page: params[:page], per_page: 5)
     @categories = Category.all  #potrebbe essere ottimizzato facendolo caricare solo una volta
     #startup_in_the_spotlight sono le startup che pagano per stare in evidenza
     @startup_in_the_spotlight = Startup.where(in_the_spotlight: true)

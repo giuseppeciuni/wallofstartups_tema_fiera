@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem "youtube_it"
 gem "vimeo"
 gem "simple_form"
+#gem "will_paginate"
+gem "will_paginate-bootstrap"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
