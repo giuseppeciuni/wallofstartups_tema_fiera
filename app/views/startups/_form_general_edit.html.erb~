@@ -40,11 +40,22 @@
   <label class="col-md-4 control-label" for="category">Startup Category</label>
   <div class="col-md-4">
     <select id="category" name="category" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
+      <%= @categories.each |category|%>
+         <option value="<%category.id%>"><%category.category%></option>
+      <%end%>
     </select>
   </div>
 </div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="fund_needed">Fund Needed</label>  
+  <div class="col-md-9">
+  <input id="fund_needed" name="fund_needed" type="text" placeholder="fund needed from the startup" class="form-control input-md" required="">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
 
 <!-- Multiple Checkboxes (inline) -->
 <div class="form-group">

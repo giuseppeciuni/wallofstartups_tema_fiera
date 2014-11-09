@@ -24,7 +24,7 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="pitch_in_a_tweet">Short Description</label>  
+  <label class="col-md-4 control-label" for="pitch_in_a_tweet">A tweet Description</label>  
   <div class="col-md-9">
   <input id="pitch_in_a_tweet" name="pitch_in_a_tweet" type="text" placeholder="Insert a very short description " class="form-control input-md" required="">
   <span class="help-block">help</span>  
@@ -36,8 +36,9 @@
   <label class="col-md-4 control-label" for="category">Startup Category</label>
   <div class="col-md-4">
     <select id="category" name="category" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
+      <%@categories.each do |category|%>
+         <option value="<% category.id %>"><% category.category %></option>
+      <%end%>
     </select>
   </div>
 </div>

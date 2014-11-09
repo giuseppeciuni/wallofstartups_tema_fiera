@@ -17,12 +17,12 @@ class StartupsController < ApplicationController
   def show
    @youtube = YouTubeIt::Client.new
    @vimeo = Vimeo::Simple::Video
+   @categories = Category.all  #potrebbe essere ottimizzato facendolo caricare solo una volta
   end
 
   # GET /startups/new
   def new
-    puts"--------------------------"
-    p params
+    #p params
     @startup = Startup.new
     @categories = Category.all
   end
@@ -31,7 +31,7 @@ class StartupsController < ApplicationController
   def edit
    @youtube = YouTubeIt::Client.new
    @vimeo = Vimeo::Simple::Video
-   #p startup_edit_params
+   @categories = Category.all  #potrebbe essere ottimizzato facendolo caricare solo una volta
   end
 
   # POST /startups

@@ -40,8 +40,9 @@
   <label class="col-md-4 control-label" for="category">Startup Category</label>
   <div class="col-md-4">
     <select id="category" name="category" class="form-control">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
+      <%= @categories.each do |category|%>
+         <option value="<%category.id%>"><%category.category%></option>
+      <%end%>
     </select>
   </div>
 </div>

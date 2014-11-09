@@ -96,7 +96,13 @@
 
 
 <!-- Pagination -->
+<div class="pagination pagination-centered">
+  <%= will_paginate @startups, renderer: BootstrapPagination::Rails %>
+</div>
 
-  <%= will_paginate @startups, renderer: BootstrapPagination::Rails, class: "pagination pagination-centered" %>
 
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>

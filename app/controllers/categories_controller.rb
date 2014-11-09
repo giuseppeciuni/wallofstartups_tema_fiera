@@ -14,7 +14,6 @@ class CategoriesController < ApplicationController
 
   # GET /categories/new
   def new
-    puts "ciao sono nel controller"
     @category = Category.new
   end
 
@@ -25,8 +24,8 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    #@category = Category.new(category_params)
-    @category = Category.new(params[:category])
+    @category = Category.new(category_params)
+    #@category = Category.new(params[:category])
 
     respond_to do |format|
       if @category.save

@@ -1,4 +1,5 @@
-<form class="form-horizontal" action="@startups">
+<%= form_for @startup, html: { class: 'form-horizontal' } do |f| %>
+  <%= errors_for(@startup) %>
 <fieldset>
 
 <!-- Form Name -->
@@ -8,7 +9,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="title">Title</label>  
   <div class="col-md-4">
-  <input id="title" name="title" type="text" placeholder="Insert the title of the startup" class="form-control input-md">
+  <input id="title" name="startup[title]" type="text" placeholder="Insert the title of the startup" class="form-control input-md">
   </div>
 </div>
 
@@ -16,7 +17,61 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="description">Startup Description</label>  
   <div class="col-md-4">
-  <input id="description" name="description" type="text" placeholder="Insert the startup Description" class="form-control input-md">
+  <input id="description" name="startup[description]" type="text" placeholder="Insert the startup Description" class="form-control input-md">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="video_url">Video Url</label>  
+  <div class="col-md-4">
+  <input id="video_url" name="startup[video_url]" type="text" placeholder="Insert the vimeo/youtube url" class="form-control input-md">
+  </div>
+</div>
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Category</label>
+  <div class="col-md-4">
+    <select id="subcategory" name="startup[subcategory]" class="form-control">
+      <% @categories.each do |category|%>
+         <option value=<%=category.id%>><%=category.category%></option>
+      <%end%>
+    </select>
+  </div>
+</div>
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">rank</label>
+  <div class="col-md-4">
+    <select id="rank" name="startup[rank]" class="form-control">
+         <option value="1">rank</option>
+    </select>
+  </div>
+</div>
+
+
+ <div class="checkbox">
+    <label>
+      <input id="approved" type="checkbox"> Approved
+    </label>
+  </div>
+
+ <div class="checkbox">
+    <label>
+      <input id="in_the_spotlight" type="checkbox" name="startup[in_the_spotlight]"> In the spotlight
+    </label>
+  </div>
+
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="funding_need">Funding Need</label>  
+  <div class="col-md-4">
+  <input id="funding_need" name="startup[funding_need]" type="text" placeholder="Funding Need" class="form-control input-md">
   </div>
 </div>
 
@@ -32,5 +87,5 @@
 </div>
 
 </fieldset>
-</form>
+<% end %>
 

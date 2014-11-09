@@ -1,14 +1,13 @@
 <h1>Editing startup</h1>
 
 <div class="container">
-
 	<div class="panel panel-info col-md-12 column">
 		<div class="panel-heading">
 			<h3 class="panel-title">
 				Panel title
 			</h3>
 		</div>
-		<div class="panel-body">
+		<div class="panel-body col-md-12 column">
 
 			<div class="panel panel-info col-md-5 column"> <!-- panel sx -->
 				<div class="panel-heading">
@@ -68,7 +67,7 @@
                                                         <!-- seconda colonna tab-interna _form_details-->
 							<div id="details" class="tab-pane fade">
 							    <h3>MORE DETAILS</h3>
-							    <%= render 'form_details_edit' %>
+							    <%= render 'form_details' %>
 							</div>        
 						    </div>
 						</div>

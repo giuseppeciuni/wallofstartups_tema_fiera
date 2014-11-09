@@ -1,87 +1,86 @@
 <p id="notice"><%= notice %></p>
 <h1><%= @startup.title %></h1>
 
-
-<!-------->
-<div id="content">
-
-   
- <div id="my-tab-content" class="tab-content">
-    <!-- Tab 1-->
-        <div class="tab-pane active" id="generic_info">
-		<!-- video -->
-		<div class="panel panel-primary col-xs-5">
-		   <div class="panel-heading">TITLE <%= @startup.title %></div>
-
-		   <div class="panel-body">
-			 <% if (@startup.video_type == 0) %> 
-			     <%= raw  @youtube.video_by(@startup.uniformed_url).embed_html5 %>
-			 <% elsif (@startup.video_type == 1) %>
-			     <%@startup.uniformed_url %>
-			     <!-- tag che rende responsive il video della startup--> 	
-			     <!-- <iframe width="420" height="315" src="<%= @startup.uniformed_url %>"></iframe> -->	             
-			     <div class="embed-responsive embed-responsive-4by3">
-				 <iframe class="embed-responsive-item" src="<%= @startup.uniformed_url %>"></iframe>
-			     </div>
-			  <% end %> 
-		       <div class="well">
-			   Title <%=@startup.description%>
-		      </div>
-		  </div>
+	<div class="panel panel-info col-md-12 column">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				Panel title
+			</h3>
 		</div>
+		<div class="panel-body">
 
-        <!-- Lista Tab-->
-	<div class="container">
-	<ul class="nav nav-tabs col-xs-5">
-	  <li class="active"><a href="#general_info" data-toggle="tab">General Informations</a></li>
-	  <li><a href="#details" data-toggle="tab">Details</a></li>
-	  <li><a href="#tab_c" data-toggle="tab">Tab C</a></li>
-	  <li><a href="#tab_d" data-toggle="tab">Tab D</a></li>
-	</ul>
-	<div class="tab-content">
-		<div class="tab-pane fade active" id="general_info">
-		    <h4>GENERAL INFORMATIONS</h4>
-		    sPellentesque habitant morbi tristique senectus et netus et malesuada famesac turpis egestas.
+			<div class="panel panel-info col-md-5 column"> <!-- panel sx -->
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Panel title
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="col-md-6 column">
+						 <% if (@startup.video_type == 0) %> 
+						     <%= raw  @youtube.video_by(@startup.uniformed_url).embed_html5 %>
+						 <% elsif (@startup.video_type == 1) %>
+						     <%@startup.uniformed_url %>
+						     <!-- tag che rende responsive il video della startup--> 	
+						     <!-- <iframe width="420" height="315" src="<%= @startup.uniformed_url %>"></iframe> -->	             
+						     <div class="embed-responsive embed-responsive-4by3">
+							    <iframe class="embed-responsive-item" src="<%= @startup.uniformed_url %>"></iframe>
+						     </div>
+						  <% end %> 
+
+                          <address> 
+                              <strong>Twitter, Inc.</strong>
+                              <br /> 
+  				        	  795 Folsom Ave, Suite 600<br /> 
+                              San Francisco, CA 94107<br /> 
+                              <abbr title="Phone">P:</abbr> (123) 456-7890
+                          </address>
+					</div>
+				</div>
+				<div class="panel-footer">
+					Panel footer
+				</div>
+			</div>
+
+			<div class="panel panel-info col-md-7 column">  <!-- panel dx -->
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						Panel title
+					</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row clearfix">
+						<!-- INIZIO NAV TABS INTERNE AL PANEL DX-->
+						<div class="bs-example">
+						    <ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#general_info">General Info</a></li>
+							<li><a data-toggle="tab" href="#details">Details</a></li>        
+						    </ul>
+                            <!-- CONTENUTO TABS INTERNE-->
+						    <div class="tab-content">  
+                            <!-- prima colonna tab-interna _form_general-->
+  							    <div id="general_info" class="tab-pane fade in active">
+							        <h3>STARTUP INFORMATION</h3>
+							        <p>Aliquip placeat salvia cillum iphone. .</p>
+                                    <%= render 'form_general_edit' %>
+			  				     </div>
+                            <!-- seconda colonna tab-interna _form_details-->
+	  						    <div id="details" class="tab-pane fade">
+							        <h3>MORE DETAILS</h3>
+							        <%= render 'form_details' %>
+							    </div>        
+						    </div>
+						</div>
+		                <!-- FINE NAV TABS INTERNE AL PANEL DX-->
+                </div>
+			</div>
+			<div class="panel-footer">
+				Panel footer
+			</div>
 		</div>
-		<div class="tab-pane fade" id="details">
-		    <h4>Pane B</h4>
-		    <p>Pellentesque habitant morbi tristique senectus et sapien ullamcor</p>
-		</div>
-		   <div class="panel-body" id="tab_c">
-			 <% if (@startup.video_type == 0) %> 
-			     <%= raw  @youtube.video_by(@startup.uniformed_url).embed_html5 %>
-			 <% elsif (@startup.video_type == 1) %>
-			     <%@startup.uniformed_url %>
-			     <!-- tag che rende responsive il video della startup--> 	
-			     <!-- <iframe width="420" height="315" src="<%= @startup.uniformed_url %>"></iframe> -->	             
-			     <div class="embed-responsive embed-responsive-4by3">
-				 <iframe class="embed-responsive-item" src="<%= @startup.uniformed_url %>"></iframe>
-			     </div>
-			  <% end %> 
-		       <div class="well">
-			   Title <%=@startup.description%>
-		      </div>
-		  </div>
-		<div class="tab-pane fade" id="tab_d">
-		    <h4>Pane D</h4>
-		    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames
-		        ac turpis egestas.</p>
-		</div>
-	</div><!-- tab content -->
-	</div><!-- end of container -->
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/js/bootstrap.min.js"></script>    </div>
-	</div>
- 
-        </div>
- 
-</div>
- 
+    </div> <!-- body centrale-->
 
-
-
+<div>
 
 
 

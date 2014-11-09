@@ -1,17 +1,18 @@
-<form class="form-horizontal" action="@categories@">
+<%= form_for @category, html: { class: 'form-horizontal' } do |f| %>
+  <%= errors_for(@category) %>
 <fieldset>
 
+
 <!-- Form Name -->
-<legend>Form Name</legend>
+<legend>Insert a new category</legend>
 
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="title">Category</label>  
   <div class="col-md-4">
-  <input name="category" type="text" placeholder="Insert the category" class="form-control input-md">
+  <input id="category" name="category[category]" type="text" placeholder="Insert the category" class="form-control input-md">
   </div>
 </div>
-
 
 <!-- Button -->
 <div class="form-group">
@@ -21,6 +22,5 @@
   </div>
 </div>
 
-
 </fieldset>
-</form>
+<% end %>
