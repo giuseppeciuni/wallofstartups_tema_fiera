@@ -78,10 +78,11 @@
 
                   <div class="navbar-inner"
                       <div class="info">
-                         Title <%= startup.title%>
+                         <p class="text-center"><%= startup.title%></p> 
+                          <p class="text-left">Funding need <p class="text.right"><%= startup.funding_need%></p>
                       </div>
-                      <div class="info">
-                        Funding Need: <%= startup.funding_need%>
+		      <div class="navbar-inner">
+                        Sector: <%= startup.subcategory%>
                       </div>
                   </div>                  
             </div>

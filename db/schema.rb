@@ -67,15 +67,14 @@ ActiveRecord::Schema.define(version: 20141101230940) do
     t.string   "uniformed_url"
     t.boolean  "approved"
     t.integer  "video_type"
+    t.boolean  "in_the_spotlight"
+    t.string   "subcategory"
+    t.decimal  "funding_need",        precision: 10, scale: 0
     t.string   "city"
     t.string   "state"
     t.string   "province"
     t.string   "country"
     t.string   "industry"
-    t.string   "subcategory"
-    t.integer  "foundedin"
-    t.boolean  "in_the_spotlight"
-    t.decimal  "funding_need",        precision: 10, scale: 0
   end
 
 end
